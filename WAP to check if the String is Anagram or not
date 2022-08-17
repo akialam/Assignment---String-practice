@@ -1,0 +1,23 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class AssignmentString3 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str1=sc.next();
+        String str2=sc.next();
+        boolean status=checkAnagram(str1,str2);
+        System.out.println("Strings are anagram: "+status);
+    }
+    static boolean checkAnagram(String str1,String str2)
+    {
+        if(str1.length()==str2.length())
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
