@@ -1,0 +1,35 @@
+package Assignment;
+
+import java.util.Scanner;
+
+//Pangram String
+public class AssignmentString4 {
+
+
+   
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+       String str = sc.nextLine();
+      boolean[] alphbetArr = new boolean[26];
+      int temp = 0;
+      int flag = 1;
+      for (int i = 0; i < str.length(); i++) {
+         if ( str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
+            temp = str.charAt(i) - 'A';
+         }else if( str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
+            temp = str.charAt(i) - 'a';
+      }
+      alphbetArr[temp] = true;
+   }
+   for (int i = 0; i < 26; i++) {
+      if (alphbetArr[i] == false)
+      flag = 0;
+   }
+   System.out.println("String: " + str);
+   if (flag == 1)
+      System.out.println("The above string is a pangram.");
+   else
+      System.out.println("The above string is not a pangram.");
+   }
+}
